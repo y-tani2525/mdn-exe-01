@@ -95,3 +95,54 @@
 
 /* pickupList
 ----------------------------------------*/
+.pickupList {
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	gap: 20px 15px;/*上下gap 20px、左右gap 15px*/
+  }
+  .pickupList__item a {
+	display: block;
+	color: inherit;
+	font-weight: bold;
+	text-decoration: none;
+  }
+  .pickupList__thumb {
+	max-width: none;
+	width: 100%;
+  }
+  .pickupList__title {
+	position: relative;
+	margin-top: 1em;
+	padding-left: 1em;
+	font-size: 14px;
+	line-height: 1.28;
+  }
+  .pickupList__title::before {
+	position: absolute;
+	left: 0;
+	top: 0.4em;
+	content: "";
+	display: block;
+	width: 0.6em;
+	height: 0.6em;
+	border-top: 2px solid;
+	border-right: 2px solid;
+	transform: rotate(45deg);
+  }
+  @media (min-width: 768px) {
+	.pickupList {
+	  grid-template-columns: repeat(3,1fr);
+	}
+	.pickupList__title {
+	  font-size: 18px;
+	  transition: color 0.3s;
+	}
+	.pickupList__item a:hover .pickupList__title {
+	  color: var(--c_main);
+	}
+  }
+  @media (min-width: 922px) {
+	.pickupList {
+	  grid-template-columns: repeat(4,1fr);
+	}
+  }

@@ -391,3 +391,42 @@ a:hover {
 /*----------------------------------------
 	button
 ----------------------------------------*/
+.buttonM {
+  display: block;
+  border: 2px solid var(--c_main);
+  background: var(--c_main);
+  color: var(--c_white);
+  text-decoration: none;
+  padding: 12px 15px;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+.buttonM:hover {
+  background: var(--c_white);
+  color: var(--c_main);
+}
+.centerButton {
+  max-width: 400px;
+  margin: 20px auto;
+}
+@media (min-width:768px) {
+  .centerButton {
+    margin: 40px auto;
+  }
+}
+.buttonL {
+  display: block;
+  border: 2px solid var(--c_main);
+  background: var(--c_white);
+  color: var(--c_black);
+  text-decoration: none;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+.buttonL:hover {
+  background: var(--c_main);
+  color: var(--c_white);
+}
